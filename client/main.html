@@ -13,10 +13,126 @@
     <h1>Sample Meteor Blog</h1>
     {{> blog }}
 
-    {{> listBlogs }}
-    
-  
 </body>
+
+<template name="LayoutOne">
+  <div class="layout-one">
+    <h1>Navagation</h1>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Page One</a>
+        </li>
+        <li>
+          <a href="/two">Page Two</a>
+        </li>
+        <li>
+          <a href="/three">Page Three</a>
+        </li>
+      </ul>
+    </nav>
+
+    <article>
+      {{> yield}}
+    </article>
+
+    <footer>
+      {{> yield "footer"}}
+    </footer>
+  </div>
+</template>
+
+<template name="LayoutTwo">
+  <div class="layout-two">
+    <h1>Layout Two</h1>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Page One</a>
+        </li>
+        <li>
+          <a href="/two">Page Two</a>
+        </li>
+        <li>
+          <a href="/three">Page Three</a>
+        </li>
+      </ul>
+    </nav>
+
+    <article>
+      {{> yield}}
+    </article>
+
+    <footer>
+      {{> yield "footer"}}
+    </footer>
+  </div>
+</template>
+
+<template name="LayoutThree">
+  <div class="layout-three">
+    <h1>Layout Three</h1>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="/">Page One</a>
+        </li>
+        <li>
+          <a href="/two">Page Two</a>
+        </li>
+        <li>
+          <a href="/three">Page Three</a>
+        </li>
+      </ul>
+    </nav>
+
+    <article>
+      {{> yield}}
+    </article>
+
+    <footer>
+      {{> yield "footer"}}
+    </footer>
+  </div>
+</template>
+
+<template name="PageOne">
+  <h2>Page One</h2>
+
+  {{#contentFor "footer"}}
+    Page One Footer
+  {{/contentFor}}
+</template>
+
+<template name="PageTwo">
+  <h2>Page Two</h2>
+  <p>
+    {{> listBlogs }}
+  </p>
+</template>
+
+<template name="PageThree">
+  <h2>Page Three</h2>
+  <p>
+    Third page content
+  </p>
+</template>
+
+
+<template name="PageOneFooter">
+  Page One Footer
+</template>
+
+<template name="PageTwoFooter">
+  Page Two Footer
+</template>
+
+<template name="PageThreeFooter">
+  Page Three Footer
+</template>
 
 <template name="blog">
     
