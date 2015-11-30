@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<!--        <link href="css/stylesheet.css" rel="stylesheet" type="text/css" />-->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <script src="bootstrap.min.js" type="text/javascript" />
+        <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src = "css/bootstrap.js"></script>
+        <!--<h:outputStylesheet name="css/stylesheet.css" />-->
+
+        <title>RATE MY TA!</title>
+    </head>
+
+    <body>
+    
+        <p></p>
+        <p></p>
+        <p></p>
+        
+            <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-primary" >
+                
+                <img src="ratemyta.png" align="center" width="100%" ></img>
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign In</div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div class="row">
+		<div class="col-xs-12">
+		<h:form styleClass="form-horizontal">
+                    
+		<div class="form-group">
+                    <h:outputLabel value="Username: " styleClass="control-label col-sm-2"/>
+                    <div class="col-sm-10">
+                        <h:inputText value="#{UserNumberBean.username}" styleClass="form-control"/>
+                    </div>
+                </div>
+                    
+            	<div class="form-group">
+                    <h:outputLabel value="Password: " styleClass="control-label col-sm-2"/>
+                    <div class="col-sm-10">
+                        <h:inputSecret value="#{UserNumberBean.passwd}" styleClass="form-control"></h:inputSecret>
+                    </div>
+                </div>
+                    
+                    
+                <div class="form-group">
+                    <div class="col-sm-10">
+                        <h:commandButton id="submit" styleClass="btn btn-default" value="submit" action="login" />
+                    </div>
+                </div>
+        </h:form>
+        
+        <div style="float:right; font-size: 90%; position: relative; top:-10px"><a href="faces/preview.xhtml">Don't have a login? Click here to view the site as a guest!</a></div>
+
+                    
+        </div></div>   
+
+
+
+                        </div>                     
+                    </div>  
+        </div>
+    </div>
+    
+        
+        
+    </body>
+</html>
